@@ -1,7 +1,7 @@
 ﻿import useFaker from "../hooks/useFaker.ts"
 import type {ImageResponse} from "../types/fakerResponse.ts";
 import Image from "./Image.tsx";
-import {Button, Flex, Spinner} from "@radix-ui/themes";
+import {Button, Flex, Heading, Spinner} from "@radix-ui/themes";
 
 export default function DataDisplay() {
     const imageCount = 3
@@ -12,12 +12,17 @@ export default function DataDisplay() {
     return (
         <>
             {error && <p className="text-red-500">Error: {error}</p>}
-            <Flex direction="row" justify="center" pb="3">
+            <Flex direction="row" justify="between" align="center" pb="3">
+                <Flex direction="column">
+                    <Heading as="h1" size="8">Faker API React App</Heading>
+                    <Heading as="h2" size="4">By Brett Abraham</Heading>
+                </Flex>
                 <Button onClick={refetchData} size="2" disabled={isLoading}>
                     {isLoading && <Spinner />}
                     {isLoading ? "Fetching Images..." : "Fetch New Images"}
                 </Button>
             </Flex>
+
             <Flex gap="3" justify="between">
                 {/*
                 We append the index as the version to each image URL to prevent it from being stored in the cache.
