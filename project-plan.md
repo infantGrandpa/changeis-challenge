@@ -26,4 +26,4 @@ displays it in a simple page.
 | 2:30pm     | 3:00pm   | Refactoring, minor changes, project planning | 2:30       |
 | 3:00pm     | 3:30pm   | Setup Radix UI                               | 3:00       |
 | 3:30pm     | 4:00pm   | Testing, documentation and Vercel demo       | 3:30       |
-| 4:00pm     | 4:30pm   | Final bug fixes and other final touches      | 3:30       |
+| 4:00pm     | 4:30pm   | Final bug fixes and other final touches      | 4:00       |

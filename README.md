@@ -1,6 +1,6 @@
 # Changeis Coding Challenge
 
-A React Application that fetches data from the [FakerAPI](https://dog.ceo/api/breeds/image/random) and
+A React Application that fetches data from the [FakerAPI](https://fakerapi.it/) and
 displays it in a simple page.
 
 [You can view the demo here.](https://changeis-challenge.vercel.app/)
