@@ -4,10 +4,11 @@ import Image from "./Image.tsx";
 import {Flex} from "@radix-ui/themes";
 
 export default function DataDisplay() {
-    const {data, error, isLoading} = useFaker('images', 3);
+    const imageCount = 3
+    const {data, error, isLoading} = useFaker('images', imageCount);
 
     return (
-       <>
+        <>
             {isLoading && <p>Loading...</p>}
             {error && <p className="text-red-500">Error: {error}</p>}
 
@@ -17,15 +18,23 @@ export default function DataDisplay() {
                 Since each image is technically coming from the same URL, the browser caches it.
                 Adding version to the url prevents this, allowing us to display multiple images from the same url.
                  */}
-                {data?.map((image: ImageResponse, index: number) => (
-                    <Image
-                        key={index}
-                        imageUrl={`${image.url}?v=${index}`}
-                        title={image.title}
-                        altText={image.title}
-                    />
-                ))}
+
+                {Array.from({length: imageCount}).map((_, index: number) => {
+                    const currentImageData: ImageResponse | undefined = data?.[index];
+
+                    return (
+                        <Image
+                            key={index}
+                            imageUrl={currentImageData?.url ? `${currentImageData.url}?v=${index}` : ''}
+                            title={currentImageData?.title || ''}
+                            description={currentImageData?.description}
+                            isLoading={isLoading}
+                            altText={currentImageData?.title || ''}
+                        />
+                    );
+                })}
+
             </Flex>
-       </>
+        </>
     )
 }
