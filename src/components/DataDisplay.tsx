@@ -1,5 +1,6 @@
 ﻿import useFaker from "../hooks/useFaker.ts"
 import type {ImageResponse} from "../types/fakerResponse.ts";
+import Image from "./Image.tsx";
 
 export default function DataDisplay() {
     const {data, error, isLoading} = useFaker('images', 3);
@@ -15,11 +16,11 @@ export default function DataDisplay() {
             Adding version to the url prevents this, allowing us to display multiple images from the same url.
              */}
             {data?.map((image: ImageResponse, index: number) => (
-                <img
+                <Image
                     key={index}
-                    src={`${image.url}?v=${index}`}
-                    alt={image.title}
-                    className={"w-48 h-48 object-cover"}
+                    imageUrl={`${image.url}?v=${index}`}
+                    title={image.title}
+                    altText={image.title}
                 />
             ))}
         </div>
