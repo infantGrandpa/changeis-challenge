@@ -1,19 +1,23 @@
 ﻿import useFaker from "../hooks/useFaker.ts"
 import type {ImageResponse} from "../types/fakerResponse.ts";
 import Image from "./Image.tsx";
-import {Flex} from "@radix-ui/themes";
+import {Button, Flex, Spinner} from "@radix-ui/themes";
 
 export default function DataDisplay() {
     const imageCount = 3
-    const {data, error, isLoading} = useFaker('images', imageCount);
-
-    //TODO: Add refresh button
+    const {data, error, isLoading, refetchData} = useFaker('images', imageCount);
+    //TODO: Prevent cached data from being loaded on refetch
     //TODO: Add change quantity button
 
     return (
         <>
             {error && <p className="text-red-500">Error: {error}</p>}
-
+            <Flex direction="row" justify="center" pb="3">
+                <Button onClick={refetchData} size="2" disabled={isLoading}>
+                    {isLoading && <Spinner />}
+                    {isLoading ? "Fetching Images..." : "Fetch New Images"}
+                </Button>
+            </Flex>
             <Flex gap="3" justify="between">
                 {/*
                 We append the index as the version to each image URL to prevent it from being stored in the cache.
