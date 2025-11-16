@@ -1,4 +1,3 @@
-import './App.css'
 import DataDisplay from "./components/DataDisplay.tsx";
 
 function App() {
