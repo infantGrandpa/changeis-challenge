@@ -9,12 +9,12 @@ displays it in a simple page.
 
 ## Task Table
 
-| **Priority \ Status** | **To Do**                                                                    | **In Progress** | **Done**                                                                                                                                                                                                  |
-|-----------------------|------------------------------------------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Must Have**         |                                                                              |                 | Create project plan (30 mins)<br>Setup React Project (30 mins)<br>Connect to Faker API (1 hr)<br>Create basic page to show data (30 mins)<br>Create Documentation (30 mins)<br>Upload to GitHub (30 mins) | 
-| **Should Have**       |                                                                              |                 | Show multiple sets of data (30 mins)<br> Setup Radix UI components (30 mins)<br>                                                                                                                          |
-| **Could Have**        | Add interactivity to page (1 hr)<br>Add custom styling to page (30 mins)<br> |                 | Setup Vercel Demo (30 mins)<br>                                                                                                                                                                           |
-| **Won’t Have**        | —                                                                            | —               | —                                                                                                                                                                                                         |
+| **Priority \ Status** | **To Do**                                | **In Progress** | **Done**                                                                                                                                                                                                  |
+|-----------------------|------------------------------------------|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Must Have**         |                                          |                 | Create project plan (30 mins)<br>Setup React Project (30 mins)<br>Connect to Faker API (1 hr)<br>Create basic page to show data (30 mins)<br>Create Documentation (30 mins)<br>Upload to GitHub (30 mins) | 
+| **Should Have**       |                                          |                 | Show multiple sets of data (30 mins)<br> Setup Radix UI components (30 mins)<br>                                                                                                                          |
+| **Could Have**        |                                          |                 | Setup Vercel Demo (30 mins)<br>Add interactivity to page (1 hr)<br>                                                                                                                                       |
+| **Won’t Have**        | Add custom styling to page (30 mins)<br> | —               | —                                                                                                                                                                                                         |
 
 ## Time Tracking
 
@@ -26,3 +26,4 @@ displays it in a simple page.
 | 2:30pm     | 3:00pm   | Refactoring, minor changes, project planning | 2:30       |
 | 3:00pm     | 3:30pm   | Setup Radix UI                               | 3:00       |
 | 3:30pm     | 4:00pm   | Testing, documentation and Vercel demo       | 3:30       |
+| 4:00pm     | 4:30pm   | Final bug fixes and other final touches      | 3:30       |

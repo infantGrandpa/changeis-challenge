@@ -5,6 +5,7 @@ export default function useFaker(endpoint: string, quantity: number) {
     const [data, setData] = useState<ImageResponse[]>();
     const [error, setError] = useState("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [refetchCount, setRefetchCount] = useState<number>(0);
 
     useEffect(() => {
         setIsLoading(true);
@@ -26,7 +27,11 @@ export default function useFaker(endpoint: string, quantity: number) {
         }
 
         fetchData();
-    }, [endpoint, quantity]);
+    }, [endpoint, quantity, refetchCount]);
 
-    return {data, error, isLoading};
+    const refetchData = () => {
+        setRefetchCount(prevTrigger => prevTrigger + 1);
+    }
+
+    return {data, error, isLoading, refetchCount, refetchData};
 }

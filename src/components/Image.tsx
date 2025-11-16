@@ -15,10 +15,12 @@ export default function Image({imageUrl, title, isLoading, description, altText}
         <Card size="2" className="w-full">
             <Skeleton loading={isLoading} minHeight="225px">
                 <Inset side="top">
-                    <img
-                        src={imageUrl}
-                        alt={altText ?? title}
-                    />
+                    {imageUrl &&
+                        <img
+                            src={imageUrl}
+                            alt={altText ?? title}
+                        />
+                    }
                 </Inset>
             </Skeleton>
             <Flex direction="column" pt="3" gap="2">
