@@ -7,7 +7,6 @@ export default function DataDisplay() {
     const imageCount = 3
     const {data, error, isLoading, refetchCount, refetchData} = useFaker('images', imageCount);
     const refetchOffset: number = refetchCount * imageCount;
-    //TODO: Add change quantity button
 
     return (
         <>
