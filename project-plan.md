@@ -18,8 +18,9 @@ displays it in a simple page.
 
 ## Time Tracking
 
-| Start Time | End Time | Task                                      | Total Time |
-|------------|----------|-------------------------------------------|------------|
-| 11:30am    | 12:00pm  | Create Project Plan / Setup React Project | 0:30       |
-| 12:00pm    | 1:00pm   | Connect to Faker API                      | 1:30       |
-| 1:00pm     | 1:30pm   | Create basic page                         | 2:00       |
+| Start Time | End Time | Task                                         | Total Time |
+|------------|----------|----------------------------------------------|------------|
+| 11:30am    | 12:00pm  | Create Project Plan / Setup React Project    | 0:30       |
+| 12:00pm    | 1:00pm   | Connect to Faker API                         | 1:30       |
+| 1:00pm     | 1:30pm   | Create basic page                            | 2:00       |
+| 2:30pm     | 3:00pm   | Refactoring, minor changes, project planning | 2:30       |
