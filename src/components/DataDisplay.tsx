@@ -7,6 +7,9 @@ export default function DataDisplay() {
     const imageCount = 3
     const {data, error, isLoading} = useFaker('images', imageCount);
 
+    //TODO: Add refresh button
+    //TODO: Add change quantity button
+
     return (
         <>
             {error && <p className="text-red-500">Error: {error}</p>}
