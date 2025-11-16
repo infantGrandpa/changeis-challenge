@@ -9,7 +9,6 @@ export default function DataDisplay() {
 
     return (
         <>
-            {isLoading && <p>Loading...</p>}
             {error && <p className="text-red-500">Error: {error}</p>}
 
             <Flex gap="3" justify="between">
