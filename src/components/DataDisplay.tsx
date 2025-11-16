@@ -7,9 +7,9 @@ export default function DataDisplay() {
 
     return (
         <div className="text-2xl">
-            <p>Data Display</p>
             {isLoading && <p>Loading...</p>}
             {error && <p className="text-red-500">Error: {error}</p>}
+
             <div className="flex flex-row flex-wrap">
                 {/*
                 We append the index as the version to each image URL to prevent it from being stored in the cache.
