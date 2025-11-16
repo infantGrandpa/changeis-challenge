@@ -1,11 +1,11 @@
 import DataDisplay from "./components/DataDisplay.tsx";
+import {Container} from "@radix-ui/themes";
 
 function App() {
     return (
-        <div className="grid grid-cols-1">
-            <div className="text-5xl font-bold">Hello World!</div>
-            <DataDisplay />
-        </div>
+        <Container size="3" p="8">
+            <DataDisplay/>
+        </Container>
     )
 }
 
