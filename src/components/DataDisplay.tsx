@@ -5,8 +5,8 @@ import {Button, Flex, Spinner} from "@radix-ui/themes";
 
 export default function DataDisplay() {
     const imageCount = 3
-    const {data, error, isLoading, refetchData} = useFaker('images', imageCount);
-    //TODO: Prevent cached data from being loaded on refetch
+    const {data, error, isLoading, refetchCount, refetchData} = useFaker('images', imageCount);
+    const refetchOffset: number = refetchCount * imageCount;
     //TODO: Add change quantity button
 
     return (
@@ -30,8 +30,8 @@ export default function DataDisplay() {
 
                     return (
                         <Image
-                            key={index}
-                            imageUrl={currentImageData?.url ? `${currentImageData.url}?v=${index}` : ''}
+                            key={index + refetchOffset}
+                            imageUrl={currentImageData?.url ? `${currentImageData.url}?v=${index + refetchOffset}` : ''}
                             title={currentImageData?.title || ''}
                             description={currentImageData?.description}
                             isLoading={isLoading}
