@@ -8,7 +8,10 @@ displays it in a simple page.
 - TypeScript
 - Vite
 - Tailwind CSS
+- Radix UI
 
 ## Getting Started
-1. Install dependencies: `npm install`
-2. Run the development server: `npm run dev`
+1. Install [Node.js](https://nodejs.org/en/download) and npm
+2. Clone the repository or download as a zip file.
+3. In the root folder, install dependencies: `npm install`
+4. Run the development server: `npm run dev`
