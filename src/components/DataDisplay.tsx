@@ -9,10 +9,15 @@ export default function DataDisplay() {
         {isLoading && <p>Loading...</p>}
         {error && <p className="text-red-500">Error: {error}</p>}
         <div className="flex flex-row flex-wrap">
+            {/*
+            We append the index as the version to each image URL to prevent it from being stored in the cache.
+            Since each image is technically coming from the same URL, the browser caches it.
+            Adding version to the url prevents this, allowing us to display multiple images from the same url.
+             */}
             {data?.map((image: ImageResponse, index: number) => (
                 <img
                     key={index}
-                    src={image.url}
+                    src={`${image.url}?v=${index}`}
                     alt={image.title}
                     className={"w-48 h-48 object-cover"}
                 />
